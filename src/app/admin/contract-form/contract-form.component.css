@@ -1,0 +1,12 @@
+.contract {
+  border-radius: 10px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #131111;
+}
+
+.contract-container {
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+}

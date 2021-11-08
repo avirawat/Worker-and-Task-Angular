@@ -1,0 +1,18 @@
+.home-container{
+    background-image: url('https://res.cloudinary.com/deri2awff/image/upload/v1635369438/banner_iyb4fl.jpg');
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+}
+
+.homecard{
+    background-color: transparent;
+  
+}
+
+.home-page-heading{
+    font-size: 45px;
+    font-family: sans-serif;
+    font-weight: 600;
+    color:rgb(7, 8, 8)
+}

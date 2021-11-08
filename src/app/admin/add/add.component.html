@@ -1,0 +1,7 @@
+<div class="containter">
+    <div class="d-flex flex-row justify-content-around align-items-center m-5">
+        <button type="button" class="btn btn-primary" *ngFor="let formbutton of addFormButtons" (click)="onClickAddButton(formbutton)">
+       {{ formbutton.name }}
+    </button>
+    </div>
+</div>

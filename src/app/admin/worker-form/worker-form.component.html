@@ -1,0 +1,98 @@
+<!-- <div [ngClass]="'contractor-container'">
+    <div class="container d-flex flex-row justify-content-center">
+        <div class="mt-5 pl-5 pr-5 pb-5 pt-2 w-50" [ngClass]="'contract'">
+            <h3 class="text-center mb-3">ADD Worker</h3>
+            <form #workerForm="ngForm" (ngSubmit)="onAddWorker(workerForm)">
+                <div class="form-group">
+                    <label for="workerName" class="">Worker Name</label>
+                    <input type="text" name="workerName" id="workerName" class="form-control w-75" placeholder="Enter Your Worker Name" ngModel />
+                </div>
+                <div class="form-group">
+                    <label for="workType" class="">Work Type</label>
+                    <input type="text" name="workType" id="workType" class="form-control w-75" placeholder="Enter Your work Type" ngModel />
+                </div>
+                <div class="form-group">
+                    <label for="availability" class="">Availability</label>
+                    <select class="form-control" name="availability" id="availability" ngModel>
+            <option value="Available">Available</option>
+            <option value="Not-Available">Not-Available</option>
+          </select>
+                </div>
+                <div class="form-group">
+                    <label for="contactNumber" class="">Contact Number</label>
+                    <input type="text" name="contactNumber" id="contactNumber" class="form-control w-75" placeholder="Enter Your Contact Number" ngModel />
+                </div>
+                <div class="form-group">
+                    <label for="workingHours" class="">Working Hours</label>
+                    <input type="number" name="workingHours" id="workingHours" class="form-control w-75" placeholder="Enter Your Working Hours" ngModel />
+                </div>
+                <div class="form-group">
+                    <label for="workerImg" class="">Image</label>
+                    <input type="text" name="workerImg" id="workerImg" class="form-control w-75" placeholder="Enter Image URL" ngModel />
+                </div>
+                <div class="">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button class="btn btn-primary ml-2" (click)="onClick()">Back</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div> -->
+<div class="p-3" [ngClass]="'worker-form-container'">
+    <div class="form-row">
+        <div class="form-group col-md-5" style="border-width: 2px; border-color: black">
+            <h4 class="text-center">Nine-To-Fivers</h4>
+            <div *ngFor="let worker of worker" class="shadow-sm p-3 mb-2 bg-body rounded" [ngClass]="'worker-label'">
+                <div class="d-flex flex-row justify-content-between">
+                    <h4>{{ worker.workerName }}</h4>
+                    <div>
+                        <button class="btn btn-outline-dark mr-2">Update</button>
+                        <button class="btn btn-outline-dark ml-2" (click)="onDeleteWorker(worker.workerId)">Delete</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group col-md-7">
+            <div>
+                <div class="container d-flex flex-row justify-content-center">
+                    <div class="mt-5 pl-5 pr-5 pb-5 pt-2 w-50" [ngClass]="'worker'">
+                        <h3 class="text-center mb-3">ADD NINE TO FIVER</h3>
+                        <form #workerForm="ngForm" (ngSubmit)="onAddWorker(workerForm)">
+                            <div class="form-group">
+                                <label for="workerName" class="">Worker Name</label>
+                                <input type="text" name="workerName" id="workerName" class="form-control w-75" placeholder="Enter Your Worker Name" ngModel />
+                            </div>
+                            <div class="form-group">
+                                <label for="workType" class="">Work Type</label>
+                                <input type="text" name="workType" id="workType" class="form-control w-75" placeholder="Enter Your work Type" ngModel />
+                            </div>
+                            <div class="form-group">
+                                <label for="availability" class="">Availability</label>
+                                <select class="form-control" name="availability" id="availability" ngModel>
+                  <option value="Available">Available</option>
+                  <option value="Not-Available">Not-Available</option>
+                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="contactNumber" class="">Contact Number</label>
+                                <input type="text" name="contactNumber" id="contactNumber" class="form-control w-75" placeholder="Enter Your Contact Number" ngModel />
+                            </div>
+                            <div class="form-group">
+                                <label for="workingHours" class="">Working Hours</label>
+                                <input type="number" name="workingHours" id="workingHours" class="form-control w-75" placeholder="Enter Your Working Hours" ngModel />
+                            </div>
+                            <div class="form-group">
+                                <label for="workerImg" class="">Image</label>
+                                <input type="text" name="workerImg" id="workerImg" class="form-control w-75" placeholder="Enter Image URL" ngModel />
+                            </div>
+                            <div class="d-flex flex-row justify-content-start">
+                                <button type="submit" class="btn btn-primary" (click)="onClick()">Submit</button>
+                                <button class="btn btn-outline-dark ml-3" (click)="onClick()">Back To Home</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

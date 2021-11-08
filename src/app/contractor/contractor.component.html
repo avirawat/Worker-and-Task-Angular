@@ -1,0 +1,102 @@
+<div style="background-color: white" class="dashboard p-3">
+  <div class="form-row">
+    <div class="form-group col-md-3">
+      <h4 class="text-center">Filters</h4>
+      <hr />
+      <div class="card" style="background-color: transparent">
+        <div class="card-body">
+          <h4 class="card-title">Priority</h4>
+          <hr />
+          <div class="form-check" *ngFor="let priority of priorityCheckedArray">
+            <label [for]="priority.value" class="form-check-label">
+              <input
+                type="checkbox"
+                class=""
+                name="priority"
+                [id]="priority.value"
+                [value]="priority.value"
+                [checked]="priority.checked"
+                (change)="onPriorityChange(priority, $event)"
+              />
+              {{ priority.value }} </label
+            ><br />
+          </div>
+        </div>
+        <div class="card-body">
+          <h4 class="card-title">Status</h4>
+          <hr />
+          <div class="form-check" *ngFor="let status of statusCheckedArray">
+            <label class="form-check-label" [for]="status.value">
+              <input
+                type="checkbox"
+                class=""
+                name="status"
+                [id]="status.value"
+                [value]="status.value"
+                [checked]="status.checked"
+                (change)="onStatusChange(status, $event)"
+              />
+              {{ status.value }} </label
+            ><br />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="form-group col-md-9">
+      <div class="">
+        <input
+          type="search"
+          class="p-2 pl-4 mb-3"
+          name="contract"
+          id="contract"
+          value=""
+          style="
+            width: 100%;
+            height: 50px;
+            border-radius: 10px;
+            border-width: 1px;
+          "
+          placeholder="Search By Contract Name"
+          [(ngModel)]="searchText"
+        />
+      </div>
+      <div>
+        <div *ngFor="let contract of contracts | filter: searchText">
+          <div class="card mb-3" [ngClass]="'contract-card'">
+            <div class="row g-0">
+              <div class="col-md-5">
+                <img
+                  src="{{ contract.contractImg }}"
+                  class="w-100"
+                  style="border-top-left-radius: 15px"
+                  alt=""
+                />
+              </div>
+              <div class="col-md-7">
+                <div class="card-body">
+                  <h5 class="card-title">
+                    Contract Name : {{ contract.contractName }}
+                  </h5>
+                  <p class="card-text">
+                    Contractor Name : {{ contract.contractorName }}
+                  </p>
+                  <p class="card-text">
+                    Contract Period : {{ contract.startDate }} to
+                    {{ contract.endDate }}
+                  </p>
+                  <p class="card-text">Status : {{ contract.cStatus }}</p>
+                  <p class="card-text">Priority :{{ contract.cPriority }}</p>
+                  <div class="">
+                    <button class="btn btn-info" (click)="onSearch(contract)">
+                      Know more
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

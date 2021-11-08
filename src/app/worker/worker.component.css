@@ -1,0 +1,10 @@
+.available {
+  color: green;
+  font-weight: 600;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.not-available {
+  color: red;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}

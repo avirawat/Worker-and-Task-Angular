@@ -1,0 +1,19 @@
+<!-- style="background-image: url('');" -->
+<div class="container-fluid">
+  <div class="row">
+    <div class="card border-dark" *ngIf="contract">
+      <img class="card-img-top" src="holder.js/100px180/" alt="">
+      <div class="card-body">
+        <h5 class="card-title">Contract Name : {{contract.contractName}}</h5>
+        <p class="card-text">Contractor Name : {{contract.contractorName}}</p>
+        <p class="card-text">Contract Period  : {{contract.startDate}} to {{contract.endDate}}</p>
+        <p class="card-text">Status : {{contract.cStatus}}</p>
+        <p class="card-text">Priority :{{contract.cPriority}}</p>
+      </div>
+      <div class="btn btn-info">
+        Check Maintenance
+      </div>
+    </div>
+  </div>
+</div>
+

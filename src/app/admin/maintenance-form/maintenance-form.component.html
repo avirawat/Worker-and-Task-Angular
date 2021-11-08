@@ -1,0 +1,103 @@
+<div [ngClass]="'maintenance-container'">
+  <div class="container d-flex flex-row justify-content-center">
+    <div class="mt-5 pl-5 pr-5 pb-5 pt-2 w-50" [ngClass]="'maintenance'">
+      <h3 class="text-center mb-3">ADD Maintenance</h3>
+      <form
+        #maintenanceForm="ngForm"
+        (ngSubmit)="onAddMaintenance(maintenanceForm)"
+      >
+        <div class="form-group">
+          <label for="maintenanceName" class="">Maintenance Name</label>
+          <input
+            type="text"
+            name="maintenanceName"
+            id="maintenanceName"
+            class="form-control w-75"
+            placeholder="Enter Your Maintenance Name"
+            ngModel
+          />
+        </div>
+        <div class="form-group">
+          <label for="maintenanceManager" class="">Maintenance Name</label>
+          <input
+            type="text"
+            name="maintenanceManager"
+            id="maintenanceManager"
+            class="form-control w-75"
+            placeholder="Enter Your Maintenance Manager Name"
+            ngModel
+          />
+        </div>
+          <div class="form-group">
+            <label for="mStartDate" class="">Start Date</label>
+            <input
+              type="date"
+              name="mStartDate"
+              id="mStartDate"
+              class="form-control w-75"
+              placeholder="Enter Start Date"
+              ngModel
+            />
+          </div>
+          <div class="form-group">
+            <label for="mEndDate" class="">End Date</label>
+            <input
+              type="date"
+              name="mEndDate"
+              id="mEndDate"
+              class="form-control w-75"
+              placeholder="Enter End date"
+              ngModel
+            />
+          </div>
+          <div class="form-group">
+            <label for="mstatus" class="">Status</label>
+            <select class="form-control" name="mstatus" id="mstatus" ngModel>
+              <option value="INPROGRESS">INPROGRESS</option>
+              <option value="ONHOLD">ONHOLD</option>
+              <option value="COMPLETED">COMPLETED</option>
+              <option value="DEFINED">DEFINED</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="mPriority" class="">Priority</label>
+            <select
+              class="form-control"
+              name="mPriority"
+              id="mPriority"
+              ngModel
+            >
+              <option value="HIGH">HIGH</option>
+              <option value="LOW">LOW</option>
+              <option value="MIDDLE">MIDDLE</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="maintenanceImg" class="">Image</label>
+            <input
+              type="text"
+              name="maintenanceImg"
+              id="maintenanceImg"
+              class="form-control w-75"
+              placeholder="Enter Image URL"
+              ngModel
+            />
+          </div>
+          <div class="form-group">
+            <label for="contractId" class="">Contract ID</label>
+            <input
+              type="text"
+              name="contractId"
+              id="contractId"
+              class="form-control w-75"
+              placeholder="Enter Contract Id"
+              ngModel
+            />
+          </div>
+        <div class="">
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

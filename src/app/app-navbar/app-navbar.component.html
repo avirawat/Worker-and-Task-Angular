@@ -1,0 +1,18 @@
+<nav class="navbar navbar-expand-sm navbar-light" style="background-color:#12d4ee;">
+    <a class="navbar-brand" href="#">
+      <img src="https://media-exp1.licdn.com/dms/image/C511BAQHBopfaAwjBqw/company-background_10000/0/1563452711438?e=2159024400&v=beta&t=8FI7ENDU7LCOGaJwqDdCP0wKtWHCM-1JI3gi3XQvJGw" 
+        alt="logo" width="40" height="35" style="border-radius:20px;"/>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav mr-auto">
+        <a class="nav-link active" href="#" routerLink="/home">
+          Home <span class="sr-only">(current)</span>
+        </a>
+        <a class="nav-link" href="#" [routerLink]="['contractor']">Dashboard</a>
+        <a class="nav-link" href="#" [routerLink]="['resource-management']">Resource Management</a>
+      </div>
+    </div>
+  </nav>
